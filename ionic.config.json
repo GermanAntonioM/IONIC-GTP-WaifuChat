@@ -1,0 +1,7 @@
+{
+  "name": "WChat",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
