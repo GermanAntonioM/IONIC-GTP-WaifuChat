@@ -24,3 +24,16 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+html {
+    --ion-font-family: 'VT323', sans-serif !important;
+    --background-color-light: #f2f2f6;
+    --background-color-dark: #121212;
+    --panel-color-light: white;
+    --panel-color-dark: #1f1f1f;
+    --text-color-light: #1f1f1f;
+    --text-color-dark: #818181;
+    --color-green: #47A992;
+    --color-gray: #D9D9D9;
+    --color-pink: #F65176;
+}
+
