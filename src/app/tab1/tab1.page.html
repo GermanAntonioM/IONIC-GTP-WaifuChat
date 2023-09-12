@@ -1,7 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      <div class="display-navbar">
+        <div class="display-name">
+          <img [src]="icon" alt="avatar" class="rendering-img setting-display" /><span 
+            class="color-text-green l-space text-size-medium"
+            >{{androidName}}</span
+          >
+        </div>
+        <a ><img [src]="settingIcon" alt="setting" class="setting-display pointer" (click)="OpenConfiguration($event)"></a>
+      </div>
     </ion-title>
   </ion-toolbar>
 </ion-header>

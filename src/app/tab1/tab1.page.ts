@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+import { SettingComponent } from '../setting/setting.component';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,19 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  public androidName: string = "W. Android Girl";
+  public icon: string = "/assets/sprites/navbar/avatar.gif";
+  public settingIcon: string = "/assets/sprites/navbar/configIcon.svg";
+  
 
+  constructor(private popoverController: PopoverController) {}
+
+  async OpenConfiguration(e: Event){
+    const popover = await this.popoverController.create({
+      component: SettingComponent,
+      event: e,
+    });
+
+    await popover.present();
+  }
 }

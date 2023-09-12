@@ -35,5 +35,43 @@ html {
     --color-green: #47A992;
     --color-gray: #D9D9D9;
     --color-pink: #F65176;
+    --min-height: 36px !important;
 }
 
+.ios body {
+    --ion-background-color: #f2f2f6;
+    --ion-toolbar-background: var(--ion-background-color);
+    --ion-item-background: #fff;
+  }
+  
+  /* This sets a different background and item background in light mode on md */
+  .md body {
+    --ion-background-color: #f9f9f9;
+    --ion-toolbar-background: var(--ion-background-color);
+    --ion-item-background: #fff;
+  }
+  
+  /* This is added for the flashing that happens when toggling between themes */
+  ion-item {
+    --transition: none;
+  }
+.color-text-green{
+    color: var(--color-green);
+}
+
+.color-text-normal{
+    color: var(--ion-color-primary-contrast)
+}
+
+
+.color-text-pink{
+    color: var(--color-pink);
+}
+
+.rendering-img{
+    image-rendering: pixelated;
+}
+
+.text-size-medium{
+    font-size: medium;
+}
