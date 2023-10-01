@@ -1,0 +1,7 @@
+span.android-container {
+    display: flex;
+    align-self: center;
+    flex-grow: 3;
+    justify-content: center;
+    height: 30em;
+}

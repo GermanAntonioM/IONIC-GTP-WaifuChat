@@ -1,0 +1,79 @@
+.chat-container {
+  background-color: var(--ion-background-color);
+  border-radius: 10px 10px 0px 0px;
+  width: 98%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat-title {
+  background-color: var(--color-green);
+  color: white;
+  border-radius: 10px 10px 0px 0px;
+  padding-bottom: 0.5em;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-style {
+  background-color: var(--color-pink);
+  border-radius: 174px;
+  border-color: transparent;
+  max-height: 10px;
+  height: 10px;
+}
+
+.sc-ion-input-md-h {
+  --border-width: 0;
+}
+
+.input-fill-outline.has-focus.sc-ion-input-md-h {
+  --border-width: 0;
+}
+
+.chat-size {
+  flex-grow: 7;
+  width: 100%;
+  height: 100px;
+  overflow-y: scroll;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.input-size {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.sc-ion-input-md-h:not(.legacy-input) {
+  min-height: 35px;
+}
+ion-button {
+  --background: var(--color-pink);
+  --background-hover: #9ce0be;
+  --background-activated: #88f4be;
+  --background-focused: #88f4be;
+
+  --color: white;
+
+  --border-radius: 50px;
+  --border-color: var(--color-pink-deep);
+  --border-style: none;
+  --border-width: 1px;
+
+  --box-shadow: -2px 0 0 0 var(--color-pink-deep), 2px 0 0 0 var(--color-pink-deep), 0 -2px 0 0 var(--color-pink-deep),
+    0 2px 0 0 var(--color-pink-deep);
+
+  --ripple-color: deeppink;
+  --padding-start: 0.1em;
+  --padding-end: 0.1em;
+  --padding-top: 1px;
+  --padding-bottom: 1px;
+}
+.send-size{
+    width: 30%;
+}

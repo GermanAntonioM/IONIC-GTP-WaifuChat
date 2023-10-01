@@ -15,6 +15,6 @@ import { SettingComponent } from '../setting/setting.component';
     FormsModule,
     TabsPageRoutingModule
   ],
-  declarations: [TabsPage,SettingComponent]
+  declarations: [TabsPage]
 })
 export class TabsPageModule {}

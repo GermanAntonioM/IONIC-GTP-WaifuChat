@@ -1,0 +1,16 @@
+<ion-card class="chat-box" [ngClass]="messageContent?.avatar">
+  <ion-card-header>
+    <ion-card-subtitle [ngClass]="messageContent?.avatar">{{ nameUser }}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content class="display-message">
+      <span>
+          <span *ngIf="(messageContent?.avatar === 'android' || false);else IsUser" class="icon-display"> 
+            <ion-icon name="skull"></ion-icon>
+          </span>
+          <ng-template #IsUser class="icon-display">
+              <ion-icon name="person"></ion-icon>
+          </ng-template>
+      </span>
+      <ion-label class="message-margin">{{ messageToPrint }}</ion-label>
+  </ion-card-content>
+</ion-card>

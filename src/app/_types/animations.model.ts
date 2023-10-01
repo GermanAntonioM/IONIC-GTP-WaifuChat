@@ -1,0 +1,1 @@
+export type Androidanimation =  'stand' | 'talk' | 'thinking';

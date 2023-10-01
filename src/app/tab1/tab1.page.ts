@@ -12,6 +12,7 @@ export class Tab1Page {
   public androidName: string = "W. Android Girl";
   public icon: string = "/assets/sprites/navbar/avatar.gif";
   public settingIcon: string = "/assets/sprites/navbar/configIcon.svg";
+  public sendIcon: string = "/assets/sprites/extra/SendIcon.svg";
   
 
   constructor(private popoverController: PopoverController) {}
@@ -23,5 +24,6 @@ export class Tab1Page {
     });
 
     await popover.present();
+
   }
 }

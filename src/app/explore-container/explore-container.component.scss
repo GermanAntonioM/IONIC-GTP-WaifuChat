@@ -1,13 +1,36 @@
-#container {
-  text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+span.android-container {
+    display: flex;
+    align-self: center;
+    flex-grow: 3;
+    justify-content: center;
 }
 
+
+span.chat-container{
+  flex-grow: 2; 
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--background-image) no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 768px) {
+  #container{
+    background-size: 900px;
+    
+  }
+}
+
+
+.display{
+  height: 100%;
+}
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -25,3 +48,4 @@
 #container a {
   text-decoration: none;
 }
+

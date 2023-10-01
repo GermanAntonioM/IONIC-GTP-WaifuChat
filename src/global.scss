@@ -28,6 +28,7 @@ html {
     --ion-font-family: 'VT323', sans-serif !important;
     --background-color-light: #f2f2f6;
     --background-color-dark: #121212;
+    --background-image:  url(assets/sprites/bg/landsScapeDay.webp);
     --panel-color-light: white;
     --panel-color-dark: #1f1f1f;
     --text-color-light: #1f1f1f;
@@ -35,6 +36,7 @@ html {
     --color-green: #47A992;
     --color-gray: #D9D9D9;
     --color-pink: #F65176;
+    --color-pink-deep: #a03b52;
     --min-height: 36px !important;
 }
 
@@ -75,3 +77,39 @@ html {
 .text-size-medium{
     font-size: medium;
 }
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #F65176 #FFFFFF;
+  }
+  
+  *::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: var(--ion-background-color);
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: var(--ion-background-color);
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: var(--ion-background-color);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--color-pink);
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-pink);
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: var(--color-pink);
+  }
