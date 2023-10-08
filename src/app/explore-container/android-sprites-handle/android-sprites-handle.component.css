@@ -3,5 +3,6 @@ span.android-container {
     align-self: center;
     flex-grow: 3;
     justify-content: center;
-    height: 30em;
+    height: 100%;
+    width: 100%;
 }

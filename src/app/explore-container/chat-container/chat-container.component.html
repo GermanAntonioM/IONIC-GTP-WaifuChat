@@ -1,9 +1,9 @@
 <div class="chat-title">
     <span>Chat</span>
     <div class="chat-container">
-        <span class="chat-size">
+        <div class="chat-size" #chatContainer>
             <app-messages-container [items]="messages"></app-messages-container>
-        </span>
+        </div>
         <span class="input-chat input-size">
             <ion-input class="input-style" fill="outline" placeholder="Enter text" [(ngModel)]="questionForAndroid"></ion-input>
             <ion-button  class="button-send"  (click)="CreateQuestion()"><img [src]="sendIcon" alt="send" class="rendering-img send-size" shape="round"></ion-button>

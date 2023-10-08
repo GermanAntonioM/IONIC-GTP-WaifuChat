@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { AndroidAnimationHandlerService } from 'src/app/_services/android-animation-handler.service';
 import { ChatGptService } from 'src/app/_services/chatGPT/chat-gpt.service';
 import { MessageBox } from '../_models/message.model';
@@ -9,7 +9,7 @@ import { MessageBox } from '../_models/message.model';
   styleUrls: ['./chat-container.component.css']
 })
 export class ChatContainerComponent {
-
+  @ViewChild('chatContainer') private chatContainer!: ElementRef;
   questionForAndroid: string = "";
   sendIcon: string = "/assets/sprites/extra/sendIcon.svg";
 
@@ -26,14 +26,16 @@ export class ChatContainerComponent {
     }
   }
   SendQuestionToChatGPT() {
-    this.androidAnimationHandlerService.SetAnimation('thinking');
-    this.openIAService.QuestionToIA(this.questionForAndroid).then((result: string | undefined) => {
-      this.androidAnimationHandlerService.SetAnimation('talk');
-      this.AddMessageBox('android',result?? "");
-    }).catch((error) => {
-      this.androidAnimationHandlerService.SetAnimation('talk');
-      this.AddMessageBox('android',"No puedo responder en estos momentos.");
-    })
+    this.androidAnimationHandlerService.SetAnimation('talk');
+    this.AddMessageBox('android', "Soy una androide con una cantidad de caracteres establecidas que te parece si me hablas de ti?");
+    this.scrollToBottom();
+    // this.openIAService.QuestionToIA(this.questionForAndroid).then((result: string | undefined) => {
+    //   this.androidAnimationHandlerService.SetAnimation('talk');
+    //   this.AddMessageBox('android',result?? "");
+    // }).catch((error) => {
+    //   this.androidAnimationHandlerService.SetAnimation('talk');
+    //   this.AddMessageBox('android',"No puedo responder en estos momentos.");
+    // })
   }
   
   AddMessageBox(avatar: 'user' | 'android', message: string) {
@@ -43,4 +45,12 @@ export class ChatContainerComponent {
       time: new Date()
     })
   }
+  scrollToBottom(): void {
+    scroll(0, 100);                
+  }
 }
+window.scroll({
+  top: 100,
+  left: 100,
+  behavior: "smooth",
+});
