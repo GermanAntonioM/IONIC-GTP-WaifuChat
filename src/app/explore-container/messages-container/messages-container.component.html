@@ -1,4 +1,4 @@
-  <ion-list lines="none" mode="ios" inset="false">
+  <ion-list lines="none" mode="ios" inset="false" #scroll>
     <ion-item *ngFor="let item of items">
       <ion-label><app-message-box [messageContent]="item"></app-message-box></ion-label>
     </ion-item>

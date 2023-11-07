@@ -9,9 +9,14 @@ import { Androidanimation } from 'src/app/_types/animations.model';
 })
 export class AndroidSpritesHandleComponent implements OnInit,AfterContentChecked {
   android: string = '';
+
+  assetsURI: string = '/assets/sprites/';
   baseAnimationURI: string = 'android-girl-';
   formatSprite: string = '.gif';
   androidAnimationSelect: Androidanimation = 'stand';
+  thinkingBox: boolean = false;
+
+  thinkingTextBoxSrpite : string = `${this.assetsURI}extra/thinking.gif`;
 
   constructor(
     private androidAnimationHandlerService: AndroidAnimationHandlerService,
@@ -24,10 +29,18 @@ export class AndroidSpritesHandleComponent implements OnInit,AfterContentChecked
     this.androidAnimationHandlerService.GetSelectedAnimation().subscribe({
       next: (animation: Androidanimation) => {
         this.androidAnimationSelect = animation;
-        this.android = `/assets/sprites/char/${this.baseAnimationURI}${this.androidAnimationSelect}${this.formatSprite}`;
+        this.android = `${this.assetsURI}char/${this.baseAnimationURI}${this.androidAnimationSelect}${this.formatSprite}`;
+        this.isLoadingMessageSprite(animation);
         this.ngAfterContentChecked();
       },
     });
+  }
+  isLoadingMessageSprite(animation: 'stand' | 'talk' | 'thinking') {
+    if(animation == 'thinking'){
+      this.thinkingBox = true;
+    }else{
+      this.thinkingBox = false;
+    }
   }
 
   ngAfterContentChecked() {

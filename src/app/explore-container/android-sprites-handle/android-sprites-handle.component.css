@@ -6,3 +6,10 @@ span.android-container {
     height: 100%;
     width: 100%;
 }
+.icon-thinking-position{
+    top: 4em;
+    right: 5em;
+    position: relative;
+    width: 4em;
+    height: 3em;
+}

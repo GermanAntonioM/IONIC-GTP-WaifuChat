@@ -16,14 +16,17 @@ span.chat-container{
   flex-direction: column;
   height: 100%;
   background: var(--background-image) no-repeat;
-  background-position: top;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: 0em;
 }
 
 @media only screen and (max-width: 768px) {
   #container{
     background-size: 900px;
-    
+    background-position: center;
+    background-position-y: 0em;
   }
 }
 

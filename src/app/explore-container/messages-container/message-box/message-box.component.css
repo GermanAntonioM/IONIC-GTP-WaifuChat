@@ -10,7 +10,11 @@
 .android{
     --background: var(--color-green);
     --color: white;
-    
+}
+
+.user{
+    --background: var(--ion-color-step-100);
+    --color: var(----ion-text-color);
 }
 
 

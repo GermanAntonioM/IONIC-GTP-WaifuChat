@@ -11,8 +11,14 @@ export class SettingComponent implements OnInit {
     this.toggleDarkTheme(ev.detail.checked);
   }
   ngOnInit() {
+    let classList = document.body.classList;
+    let isDarkThemeExist = (classList.contains("dark"));
+    if (isDarkThemeExist) {
+      this.initializeDarkTheme(true);
+    }
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
     prefersDark.addEventListener('change', (mediaQuery) => this.initializeDarkTheme(mediaQuery.matches));
+    
   }
 
   initializeDarkTheme(isDark: any) {

@@ -1,7 +1,7 @@
 <div class="chat-title">
     <span>Chat</span>
     <div class="chat-container">
-        <div class="chat-size" #chatContainer>
+        <div class="chat-size" #scrollMe [scrollTop]="scrollMe.scrollHeight">
             <app-messages-container [items]="messages"></app-messages-container>
         </div>
         <span class="input-chat input-size">
